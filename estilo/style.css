@@ -1,0 +1,208 @@
+@charset "UTF-8";  /* DEFINE A ADIÇÃO DOS CARACTERES DE ACENTUAÇÃO E ETC, DO PT-BR */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DotGothic16&display=swap'); /* FONTE EXTERNA VIA LINK (SEM ARQUIVO BAIXADO) */
+
+@font-face {  /* ADICIONA A FONTE (COM O ARQUIVO DA FONTE BAIXADO) */
+    font-family: 'Android'; /* NOME DA FONTE QUE VOCÊ QUIS DÁ */
+    src: url('../fontes/idroid.otf') format('opentype'); /* LOCALIZAÇÃO DA PASTA FONTE E O FORMATO DA FONTE QUE FOI BAIXADA */
+    font-weight: normal; /* TIPO DE FONTE, SE É NEGRITO, ITÁLICO... */
+}
+
+:root {                     /* CRIA VARIÁVEL */
+    --cor0: #ebe5c5;      /* VARIAVEL */
+    --cor1: #83e1ad;      /* VARIAVEL */
+    --cor2: #3ddc84;      /* VARIAVEL */
+    --cor3: #2fa866;      /* VARIAVEL */
+    --cor4: #1a5c37;      /* VARIAVEL */
+    --cor5: #063d1e;      /* VARIAVEL */
+
+    --fonte-padrao: Arial, verdana, helvetica, sans-serif; /* VARIAVEL */
+    --fonte-destaque: 'Bebas Neue', cursive;               /* VARIAVEL */
+    --fonte-android: 'Android', cursive;                   /* VARIAVEL */
+}
+
+
+* {                 /* CONFIGURAÇÃO GLOBAL EM TODO SITE (COMPLETO) */
+    margin: 0px;    /* SEM MARGEM */
+    padding: 0px;   /* SEM PADDING */
+}
+
+body { /* TUDO O QUE ESTÁ NO CORPO DO SITE */
+    background-color: var(--cor0);  /* COR DO FUNDO */
+    font-family: var(--fonte-padrao); /* ESTILHO DA FONTE */
+}
+
+a.externo::after {      /* TODOS OS LINKS QUE FOR DA CLASSE EXTERNO ADICIONE DEPOIS DELE. */
+    content: '\00a0\1F517';  /* ADIÇÃO DO EMOGI APOS O LINK OU DO LADO DO LINK */
+
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5)); /* AQUI FAZ UM DEGRADÊ */
+    min-height: 150px;  /* ALTURA MINIMA */
+    text-align: center; /* ALINHAMENTO DO TEXTO PARA CENTRALIZADO */
+    padding-top: 40px;  /* ESPAÇO DE CIMA DO BLOCO */
+}
+
+header > h1 {       /* TODO h1 QUE ESTIVER DENTRO DO HEADER */
+    color: white; /* COR DA LETRA */
+    font-family: var(--fonte-destaque); /* ESTILO DA FONTE */
+    font-size: 3em; /* TAMANHO DA FONTE */
+    font-weight: normal;  /* DEIXA O ESTILHO DA FONTE NORMAL */
+    margin-bottom: 20px; /* LDISTANCIA DA BORDA PARA FORA DO BLOCO */
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.582); /* SOMBRA DENTRO DO TEXTO */
+}
+
+header > p {                                         /* TODO p QUE ESTA DENTRO DO HEADER */
+    font-family: var(--fonte-padrao);                /* ESTILO DA FONTE */
+    font-size: 1.3em;                                /* TAMANHO DA FONTE */
+    color: white;                                  /* COR */
+    max-width: 600px;                                /* LARGURA MÁXIMA */
+    padding-right: 10px;                             /* DISTANCIA DA LETRA PARA A BORDA À DIREITA */
+    padding-left: 10px;                              /* DISTANCIA DA LETRA PARA A BORDA À ESQUERDA */
+    margin-bottom: 30px;                             /* MARGIN DO P */
+    margin: auto;                                    /* DEIXA TODAS AS MARGENS COM MESMA MEDIDA (CENTRALIZADO) */
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.582); /* SOMBRA DENTRO DO TEXTO */
+}
+
+nav { /* TUDO QUE ESTIVER NO NAV */
+    background-color: var(--cor5); /* COR DO FUNDO */
+    padding: 10px; /* DISTANCIA DA LETRA PARA A BORDA */
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.267); /* SOMBRA */
+}
+
+nav > a {
+    color:var(--cor1);             /* COR DA LETRA */
+    padding: 10px;              /* ESPAÇO ENTRE A LETRA E A BORDA */
+    border-radius: 5px;         /* DEIXA A BORDA DO BLOCO COM CANTOS ARREDONDADOS */
+    text-decoration: none;      /* TEXT-DECORATION EM "none" REMOVE O SUBLINHADO DO LINK */
+    font-weight: bold;          /* DEFINE SE A LETRA VAI FICAR NEGRITO, ITALICO, SUBLINHADO... */
+    transition-duration: 0.3s;  /* FAZ UMA TRANSIÇÃO AO MUDAR DE BLOCO */
+}
+
+nav a:hover {       /* TODO a QDENTRO DO NAV ao passar o mouse em cima fazer algo */
+    background-color: var(--cor3);  /* COR DO FUNDO */
+    color: var(--cor5);             /* COR DA LETRA */
+}
+
+main {
+    min-width: 300px;                   /* LARGURA MÍNIMA */
+    max-width: 1000px;                  /* LARGURA MAXIMA */
+    margin: auto;                       /* DEIXA TODAS AS MARGENS COM MESMA MEDIDA (CENTRALIZADO) */
+    margin-bottom: 30px;                /* ESPAÇO DA MARGEM (EM BAIXO) "MARGIM É O ESPAÇO DA BORDA PARA FORA */
+    padding: 20px;                      /* ESPAÇO ENTRE A LETRA E A BORDA */
+    background-color: white;          /* COR DO FUNDO DO BLOCO */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.671);  /* CRIA SOMBRAS PARA OS BLOCOS */
+    border-bottom-left-radius: 10px;    /* FAZ BORDAS COM CANTOS ARRENDONDADOS (À ESQUERDA) */
+    border-bottom-right-radius: 10px;   /* FAZ BORDAS COM CANTOS ARRENDONDADOS (À DIREITA) */
+}
+
+main h1 {                    /* SIGNIFICA TODA "tag h1" NO "main" (TODO H1 DENTRO DO MAIN) */
+    color: var(--cor5);      /* COR DA LETRA */
+    font-family: var(--fonte-android);      /* DEFINE A FONTE */
+    font-weight: normal;     /* DEIXA A FONTE NORMAL */
+    font-size: 1.8em;        /* TAMANHO DA FONTE */
+}
+
+
+main h2 {                   /* SIGNIFICA TODA "tag h2" NO "main" (TODO H2 DENTRO DO MAIN) */
+    font-family: var(--fonte-android);
+    color: var(--cor4);     /* COR DA LETRA */
+    font-size: 1.3em;       /* TAMANHO DA FONTE */
+    font-weight: normal;    /* DEIXA A FONTE NORMAL */
+    background-image: linear-gradient(to right, var(--cor1), transparent);    /* AQUI FAZ UM DEGRADÊ EM IMAGEM */
+    text-indent: 8px;       /* ESPAÇAMENTO ANTES DA PRIMEIRA LETRA DO TEXTO (PARÁGRAFO) */
+}
+
+main img {              /* TODA IMAGEM QUE ESTA NO MAIN */
+    width: 100%;        /* LARGURA DA IMAGEM (DEIXA A IMAGEM SEMPRE COM SEU TAMANHO ORIGINAL FIXO) */
+}
+
+main img.pequena {          /* SIGNIFICA TODA "img com a classe class=pequena" DENTRO DO "main" */
+    max-width: 350px;       /* LARGURA MAXIMA DA IMAGEM (TERÁ SEMPRE ESTE TAMANHO EM DIFERENTES TELAS) */
+    display:block;          /* FAZ A IMAGEM VIRAR UM BLOCO (IMAGEM NÃO É BLOCO, POR ISSO ESTE COMANDO PARA TRANSFORMAR) */
+    margin: auto;           /* MARGEM DA IMAGEM NA FORMA (auto) deixa ela sempre centralizada */
+}
+
+div.video {
+    background-color: var(--cor1);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 58%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+main p {                    /* SIGNIFICA TODA "tag p" DENTRO DO "main" */
+    margin: 15px 0px;       /* MARGEM DO BLOCO */
+    text-align: justify;    /* ALINHAMENTO DE TEXTO */
+    text-indent: 30px;      /* ESPAÇAMENTO ANTES DA PRIMEIRA LETRA DO TEXTO (PARÁGRAFO) */
+    font-size: 1em;         /* TAMANHO DA FONTE */
+    line-height: 2em;       /* ESPAÇAMENTO ENTRE LINHAS */
+}
+
+main strong {               /* SIGNIFICA TODA "tag strong" DENTRO DO "main" */
+    color: var(--cor4);     /* COR DA LETRA */
+    font-weight: bold;      /* DEFINE SE A LETRA VAI FICAR NEGRITO, ITALICO, SUBLINHADO... */
+}
+
+main a {                            /* TODO a DENTRO DO MAIN */
+    text-decoration: none;          /* REMOVE O SUBLINHADO DOS LINKS */
+    font-weight: bold;              /* FONTE ESTA EM NEGRITO */
+    color: var(--cor5);             /* NA FORMA "none" REMOVE OS SUBLINHADO DOS LINKS */
+    background-color: var(--cor1);  /* O BACKGROUND-COLOR É A COR DO FUNDO DE UM BLOCO */
+    padding: 2px 6px;               /* ESPAÇO ENTRE A LETRA E A BORDA */ 
+}
+
+main a:hover {                         /* O (HOVER) SIGNIFICA QUE TUDO QUE FOR PASSAR O MOUSE EM CIMA DO LINK DENTRO DO "MAIN" MOSTRE */
+    text-decoration: underline;        /* NA FORMA "underline" MOSTRA OS SUBLINHADO DOS LINKS */
+    color: var(--cor4);                /* COR QUANDO PASSAR O MOUSE EM CIMA DENTRO DA TAG "a" */
+}
+
+aside {
+    background-color: var(--cor1);      /* COR DO ASIDE */
+    padding: 10px;                      /* ESPAÇO DAS LETRAS PARA A BORDA NO ASIDE */
+    border-radius: 10px;                /* DEIXA O ASIDE COM CANTOS ARREDONDADOS */
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.376);    /* SOMBRA NO BACKGROUND DO ASIDE */             
+}
+
+aside ul {
+    list-style-type: '\2714\00A0\00A0';  /* ESSA ADIÇÃO DE EMOJI NAO É ACEITA PARA ALGUNS NAVEGADORES (NAO RECOMENDADO) */
+    list-style-position: inside;         /* COLOCA OS PONTINHOS DA LISTA PARA DENTRO */
+    columns: 2;                          /* CRIA 2 COLUNAS PARA A LISTA */                          
+}
+
+aside > h3 {
+    background-color: var(--cor4);      /* COR do h3 NO ASIDE */
+    color: white;                     /* COR DA LETRA DO h3 */
+    padding: 10px;                      /* PADDING NO h3 */
+    margin: -10px -10px -0px -10px;     /* MARGIN NO h3 */
+    border-radius: 10px 10px 0px 0px;   /* CANTOS ARREDONDADOS NO BACKGROUND DO h3 */
+}
+
+
+footer {                                 /* TUDO QUE ESTIVER NO CABEÇALHO */
+    background-color: var(--cor5);       /* COR DO FUNDO DO FOOTER */     /* FOOTER SIGNIFICA "RODAPÉ" */
+    color: white;                      /* COR DA LETRA */
+    text-align: center;                  /* ALINHAMENDO DO TEXTO PARA CENTRALIZADO */
+    font-size: 0.8em;                    /* TAMANHO DA LETRA */
+    padding: 5px;                        /* DISTANCIDA DA LETRA PARA A BORDA */
+}
+
+footer a{
+    color: white;                      /* COR DA LETRA DO LINK */
+    font-weight: bolder;                 /* DEIXA O LINK EM NEGRITO */
+    text-decoration: none;               /* REMOVE O SUBLINHADO DO LINK */
+}
+
+footer a:hover {                         /* AO PASSAR O MOUSE EM CIMA DOS LINKS */
+    text-decoration: underline;          /* MOSTRA O SUBLINHADO DOS LINKS */
+    color: var(--cor1);                  /* COR DO LINK AO PASSAR O MOUSE EM CIMA */
+}
